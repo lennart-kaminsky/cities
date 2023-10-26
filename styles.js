@@ -1,4 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export default createGlobalStyle`
   *,
@@ -9,6 +12,12 @@ export default createGlobalStyle`
 
   body {
     margin: 0;
-    font-family: system-ui;
+    font-family: ${poppins.style.fontFamily};
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
   }
 `;
